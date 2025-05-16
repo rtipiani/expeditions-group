@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-9deg); }
+  50% { transform: rotate(9deg); }
+}
+
+.animate-wiggle {
+  animation: wiggle 0.5s infinite;
+}

@@ -1,0 +1,129 @@
+<header id="main-header" class="fixed top-0 left-0 w-full backdrop-blur-md z-50">
+    <nav class="container mx-auto flex items-center justify-between px-4 py-4">
+        <div>
+            <a href="/" class="text-white font-bold text-xl tracking-wide hover:text-yellow-400 transition-colors duration-300">
+                Expeditions <span class="text-yellow-400">Group</span>
+            </a>
+        </div>
+        <button id="menu-toggle" class="xl:hidden text-white focus:outline-none" aria-label="Abrir Menú">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 transition-transform duration-300 ease-in-out" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+        <ul id="menu" class="max-h-0 overflow-hidden xl:overflow-visible xl:max-h-none xl:flex flex-col xl:flex-row items-center text-white absolute xl:relative top-full left-0 w-full xl:w-auto bg-gray-950 bg-opacity-80 xl:bg-transparent shadow-md xl:shadow-none transition-[max-height] duration-500 ease-in-out text-center">
+            <li>
+                <a href="/" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="/cajamarca" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
+                    Cajamarca
+                </a>
+            </li>
+            <li>
+                <a href="/punta-cana" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
+                    Punta Cana
+                </a>
+            </li>
+            <li>
+                <a href="/playas-del-norte" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
+                    Playas del Norte
+                </a>
+            </li>
+            <li>
+                <a href="/sur-magico" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
+                    Sur Mágico
+                </a>
+            </li>
+            <li>
+                <a href="/tarapoto-fascinante" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
+                    Tarapoto Fascinante
+                </a>
+            </li>
+            <li>
+                <a href="/cusco-magico" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
+                    Cusco Mágico
+                </a>
+            </li>
+            <li>
+                <a href="/royal-decameron" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
+                    Royal Decameron
+                </a>
+            </li>
+            <li>
+                <a href="/cartagena-de-indias" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
+                    Cartagena de Indias
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const header = document.getElementById("main-header");
+        const menuToggle = document.getElementById("menu-toggle");
+        const menu = document.getElementById("menu");
+        const menuLinks = document.querySelectorAll(".menu-link");
+  
+        if (header) {
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 50) {
+                    header.classList.add("bg-black");
+                    header.style.background = "rgba(10, 10, 10, 0.75)";
+                } else {
+                    header.classList.remove("bg-black");
+                    header.style.background = "transparent";
+                }
+            });
+        }
+  
+        if (menuToggle && menu) {
+            menuToggle.addEventListener("click", () => {
+                if (menu.classList.contains("max-h-0")) {
+                    menu.classList.remove("max-h-0");
+                    menu.classList.add("max-h-screen");
+                } else {
+                    menu.classList.remove("max-h-screen");
+                    menu.classList.add("max-h-0");
+                }
+            });
+  
+            menuLinks.forEach(link => {
+                link.addEventListener("click", () => {
+                    menu.classList.remove("max-h-screen");
+                    menu.classList.add("max-h-0");
+                });
+            });
+  
+            window.addEventListener("resize", () => {
+                if (window.innerWidth >= 1280) {
+                    menu.classList.add("max-h-0");
+                }
+            });
+        }
+  
+        const currentPath = window.location.pathname.toLowerCase();
+  
+        menuLinks.forEach(link => {
+            const href = link.getAttribute("href")?.toLowerCase();
+  
+            if (href && href !== "/") {
+                if (currentPath.startsWith(href)) {
+                    link.classList.add("text-yellow-400", "font-bold");
+                    link.classList.remove("text-white");
+                } else {
+                    link.classList.remove("text-yellow-400", "font-bold");
+                    link.classList.add("text-white");
+                }
+            } else if (href === "/" && currentPath === "/") {
+                link.classList.add("text-yellow-400", "font-bold");
+                link.classList.remove("text-white");
+            } else {
+                link.classList.remove("text-yellow-400", "font-bold");
+                link.classList.add("text-white");
+            }
+        });
+    });
+</script>

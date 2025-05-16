@@ -1,0 +1,89 @@
+---
+const slides = [
+    { image: "../../slide1.png", title: "Cusco Mágico", buttonText: "Consultar Ahora", position: "object-center" },
+    { image: "../../slide2.png", title: "Tarapoto Fascinante", buttonText: "Consultar Ahora", position: "object-center" },
+    { image: "../../slide3.png", title: "Royal de Decameron", buttonText: "Consultar Ahora", position: "object-[30%_50%]" },
+    { image: "../../slide4.png", title: "Punta Cana", buttonText: "Consultar Ahora", position: "object-[30%_50%]" }
+];
+
+// Generar srcset automáticamente
+const generateSrcSet = (image: string): string => `
+    ${image.replace('.avif', '-355w.avif')} 355w,
+    ${image.replace('.avif', '-852w.avif')} 852w,
+    ${image.replace('.avif', '-1278w.avif')} 1278w,
+    ${image.replace('.avif', '-1680w.avif')} 1680w,
+    ${image.replace('.avif', '-2000w.avif')} 2000w,
+    ${image.replace('.avif', '-2268w.avif')} 2269w
+`;
+
+// Nuevo sizes optimizado
+const sizes = `
+    (min-width: 2268px) 2268px,
+    (min-width: 2000px) 2000px,
+    (min-width: 1680px) 1680px,
+    (min-width: 1278px) 1278px,
+    (min-width: 852px) 852px,
+    (min-width: 355px) 355px,
+    100vw
+`;
+---
+<div class="relative w-full h-screen overflow-hidden">
+    <div id="slider" class="flex transition-transform duration-700 ease-in-out w-full h-full">
+        {slides.map((slide, index) => (
+            <div class="w-full h-full flex-shrink-0 relative aspect-[16/9]" data-slide={index}>
+                <picture>
+                    <source srcset={generateSrcSet(slide.image)} sizes={sizes} type="image/avif" />
+                    <img src={slide.image} alt={slide.title} width="1920" height="1080" class={`w-full h-full object-cover ${slide.position}`} loading="lazy" />
+                </picture>
+                <div class="absolute inset-0 flex flex-col items-center justify-center text-white bg-black/40">
+                    <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 text-center px-4 leading-snug sm:leading-tight md:leading-normal max-w-[80%] sm:max-w-[60%] lg:max-w-[50%]">
+                        {slide.title}
+                    </h2>
+                    <a href="#" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 bg-blue-800 hover:bg-blue-900 text-white font-medium rounded-full shadow-md transition-all duration-300">
+                        {slide.buttonText}
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                    </a>
+                </div>
+            </div>
+        ))}
+    </div>
+
+    <button id="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white p-3" aria-label="Ir al slider anterior">
+        <i class="fa-solid fa-chevron-left fa-2xl"></i>
+    </button>
+    <button id="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white p-3" aria-label="Ir al slider siguiente">
+        <i class="fa-solid fa-chevron-right fa-2xl"></i>
+    </button>
+</div>
+
+<script is:inline>
+    window.onload = function () {
+        const slider = document.getElementById("slider");
+        const prev = document.getElementById("prev");
+        const next = document.getElementById("next");
+
+        if (!slider || !prev || !next) return;
+
+        let index = 0;
+        const slides = slider.children.length;
+
+        function updateSlider() {
+            slider.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function nextSlide() {
+            index = (index + 1) % slides;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            index = (index - 1 + slides) % slides;
+            updateSlider();
+        }
+
+        next.addEventListener("click", nextSlide);
+        prev.addEventListener("click", prevSlide);
+
+        setInterval(nextSlide, 4000);
+    };
+</script>

@@ -1,0 +1,88 @@
+---
+import BreadcrumbCajamarca from "../components/BreadcrumbCajamarca.astro"
+import Navbar from "../components/Navbar.astro"
+import Layout from "../layouts/Layout.astro"
+---
+<Layout>
+    <Navbar />
+    <BreadcrumbCajamarca />
+    <section class="pt-8 pb-16 px-6 bg-white min-h-screen">
+        <div class="max-w-4xl mx-auto">
+            <div class="space-y-6 text-gray-700 text-lg">
+                <div class="space-y-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-blue-800 mb-4">
+                        01 DÍA: CITY TOURS - SANTA APOLONIA
+                        </h2>
+                        <ul class="space-y-2 text-gray-800">
+                            <li>
+                                <span class="font-semibold">02:45 hrs:</span> 
+                                Traslado al aeropuerto.
+                            </li>
+                            <li>
+                                <span class="font-semibold">07:25 hrs:</span> 
+                                Vuelo a Cajamarca con Jetsmart.
+                            </li>
+                            <li>
+                                <span class="font-semibold">08:40 hrs:</span> 
+                                Llegada a Cajamarca. Recepción e instalación en el hotel.
+                            </li>
+                            <li>
+                                <span class="font-semibold">08:00 hrs:</span> 
+                                Desayuno americano. Tiempo libre para aclimatarse.
+                            </li>
+                            <li>
+                                <span class="font-semibold">13:00 hrs:</span> 
+                                Almuerzo en restaurante turístico Salas. Inicio del recorrido:
+                                <ul class="list-disc list-inside ml-4 mt-1 text-gray-700">
+                                    <li>
+                                        Plaza de Armas: escenario de la caída del imperio incaico.
+                                    </li>
+                                    <li>
+                                        Cuarto del Rescate: lugar donde Atahualpa fue retenido por los españoles.
+                                    </li>
+                                    <li>
+                                        Complejo Monumental de Belén.
+                                    </li>
+                                    <li>
+                                        Colina de Santa Apolonia: vista panorámica y la Silla del Inca.
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="font-semibold">19:00 hrs:</span> 
+                                Cena en el hotel.
+                            </li>
+                            <li>
+                                <span class="italic">
+                                    Pernocte.
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-blue-800 mb-4">
+                        02 DÍA: GRANJA PORCÓN - HACIENDA LA COLPA - BAÑOS DEL INCA
+                        </h2>
+                        <ul class="space-y-2 text-gray-800">
+                            <li>
+                                <span class="font-semibold">08:00 hrs:</span> 
+                                Desayuno americano.
+                            </li> 
+                        </ul>
+                    </div>
+                <div>
+            </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 mt-10">
+            <a href="/#tours" class="text-blue-800 px-6 py-3 rounded-lg border border-blue-800 text-base font-medium hover:bg-blue-800 hover:text-white transition">
+                <i class="fas fa-arrow-left mr-2"></i> Volver
+            </a>
+            <a href="" class="bg-blue-800 text-white px-6 py-3 rounded-lg text-base font-medium hover:bg-blue-900 transition" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                Consultar ahora
+            </a>
+        </div>
+    </section>
+</Layout>
