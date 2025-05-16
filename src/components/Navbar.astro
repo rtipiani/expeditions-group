@@ -1,7 +1,7 @@
 <header id="main-header" class="fixed top-0 left-0 w-full backdrop-blur-md z-50">
     <nav class="container mx-auto flex items-center justify-between px-4 py-4">
         <div>
-            <a href="/" class="text-white font-bold text-xl tracking-wide hover:text-yellow-400 transition-colors duration-300">
+            <a href="/" class="text-white font-bold text-xl tracking-wide xl:hover:text-yellow-400 transition-colors duration-300">
                 Expeditions <span class="text-yellow-400">Group</span>
             </a>
         </div>
@@ -10,50 +10,84 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
         </button>
-        <ul id="menu" class="max-h-0 overflow-hidden xl:overflow-visible xl:max-h-none xl:flex flex-col xl:flex-row items-center text-white absolute xl:relative top-full left-0 w-full xl:w-auto bg-gray-950 bg-opacity-80 xl:bg-transparent shadow-md xl:shadow-none transition-[max-height] duration-500 ease-in-out text-center">
+        <ul id="menu" class="max-h-0 overflow-hidden xl:overflow-visible xl:max-h-none xl:flex flex-col xl:flex-row items-start xl:items-center text-white absolute xl:relative top-full left-0 w-full xl:w-auto bg-blue-800 bg-opacity-80 xl:bg-transparent shadow-md xl:shadow-none transition-[max-height] duration-500 ease-in-out text-center xl:text-center">
             <li>
-                <a href="/" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
+                <a href="/" class="block py-3 px-4 xl:hover:text-yellow-400 transition menu-link">
                     Inicio
                 </a>
             </li>
-            <li>
-                <a href="/cajamarca" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
-                    Cajamarca
-                </a>
+
+            <!-- Paquetes Internacionales -->
+            <li class="relative w-full xl:w-auto group">
+                <button class="block w-full text-center py-3 px-4 xl:hover:text-yellow-400 transition submenu-toggle xl:cursor-pointer">
+                    Paquetes Internacionales
+                </button>
+                <ul class="submenu hidden xl:block xl:absolute xl:top-full xl:left-0 xl:bg-blue-800 xl:shadow-lg xl:rounded xl:invisible xl:opacity-0 xl:group-hover:visible xl:group-hover:opacity-100 xl:group-hover:translate-y-1 xl:transition-all xl:duration-300 text-center min-w-[200px] z-50 pointer-events-auto bg-blue-800 xl:bg-opacity-80">
+                    <li>
+                        <a href="/punta-cana" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                            Punta Cana
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/riviera-maya" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                            Riviera Maya
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cartagena-de-indias" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                            Cartagena de Indias
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/san-andres" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                            San Andrés
+                        </a>
+                    </li>
+                </ul>
             </li>
-            <li>
-                <a href="/punta-cana" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
-                    Punta Cana
-                </a>
+
+            <!-- Paquetes Nacionales -->
+            <li class="relative w-full xl:w-auto group">
+                <button class="block w-full text-center py-3 px-4 xl:hover:text-yellow-400 transition submenu-toggle xl:cursor-pointer">
+                    Paquetes Nacionales
+                </button>
+                <ul class="submenu hidden xl:block xl:absolute xl:top-full xl:left-0 xl:bg-blue-800 xl:shadow-lg xl:rounded xl:invisible xl:opacity-0 xl:group-hover:visible xl:group-hover:opacity-100 xl:group-hover:translate-y-1 xl:transition-all xl:duration-300 text-center min-w-[200px] z-50 pointer-events-auto bg-blue-800 xl:bg-opacity-80">
+                    <li>
+                        <a href="/royal-decameron" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                            Royal Decameron
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cusco-magico" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                            Cusco Mágico
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/tarapoto-fascinante" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                            Tarapoto Fascinante
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/playas-del-norte" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                            Playas del Norte
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/arequipa" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                            Arequipa
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/sur-magico" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                            Sur Mágico
+                        </a>
+                    </li>
+                </ul>
             </li>
+
             <li>
-                <a href="/playas-del-norte" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
-                    Playas del Norte
-                </a>
-            </li>
-            <li>
-                <a href="/sur-magico" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
-                    Sur Mágico
-                </a>
-            </li>
-            <li>
-                <a href="/tarapoto-fascinante" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
-                    Tarapoto Fascinante
-                </a>
-            </li>
-            <li>
-                <a href="/cusco-magico" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
-                    Cusco Mágico
-                </a>
-            </li>
-            <li>
-                <a href="/royal-decameron" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
-                    Royal Decameron
-                </a>
-            </li>
-            <li>
-                <a href="/cartagena-de-indias" class="block py-3 px-4 hover:text-yellow-400 transition menu-link">
-                    Cartagena de Indias
+                <a href="/contactanos" class="block py-3 px-4 xl:hover:text-yellow-400 transition menu-link">
+                    Contáctanos
                 </a>
             </li>
         </ul>
@@ -66,7 +100,9 @@
         const menuToggle = document.getElementById("menu-toggle");
         const menu = document.getElementById("menu");
         const menuLinks = document.querySelectorAll(".menu-link");
-  
+        const submenuToggles = document.querySelectorAll(".submenu-toggle");
+
+        // Header scroll background
         if (header) {
             window.addEventListener("scroll", function () {
                 if (window.scrollY > 50) {
@@ -78,37 +114,42 @@
                 }
             });
         }
-  
+
+        // Mobile menu toggle
         if (menuToggle && menu) {
             menuToggle.addEventListener("click", () => {
-                if (menu.classList.contains("max-h-0")) {
-                    menu.classList.remove("max-h-0");
-                    menu.classList.add("max-h-screen");
-                } else {
-                    menu.classList.remove("max-h-screen");
-                    menu.classList.add("max-h-0");
-                }
+                menu.classList.toggle("max-h-0");
+                menu.classList.toggle("max-h-screen");
             });
-  
+
             menuLinks.forEach(link => {
                 link.addEventListener("click", () => {
                     menu.classList.remove("max-h-screen");
                     menu.classList.add("max-h-0");
                 });
             });
-  
+
             window.addEventListener("resize", () => {
                 if (window.innerWidth >= 1280) {
                     menu.classList.add("max-h-0");
                 }
             });
         }
-  
+
+        // Submenu toggles (only for mobile)
+        submenuToggles.forEach(toggle => {
+            toggle.addEventListener("click", () => {
+                const submenu = toggle.nextElementSibling;
+                if (window.innerWidth < 1280 && submenu) {
+                    submenu.classList.toggle("hidden");
+                }
+            });
+        });
+
+        // Active link highlight
         const currentPath = window.location.pathname.toLowerCase();
-  
-        menuLinks.forEach(link => {
+            menuLinks.forEach(link => {
             const href = link.getAttribute("href")?.toLowerCase();
-  
             if (href && href !== "/") {
                 if (currentPath.startsWith(href)) {
                     link.classList.add("text-yellow-400", "font-bold");
