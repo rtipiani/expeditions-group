@@ -1,8 +1,8 @@
 <header id="main-header" class="fixed top-0 left-0 w-full backdrop-blur-md z-50">
     <nav class="container mx-auto flex items-center justify-between px-4 py-4">
         <div>
-            <a href="/" class="text-white font-bold text-xl tracking-wide xl:hover:text-yellow-400 transition-colors duration-300">
-                Expeditions <span class="text-yellow-400">Group</span>
+            <a href="/" class="flex items-center">
+                <img src="/logo2.png" alt="Expeditions Group Logo" class="h-14 w-auto object-contain">
             </a>
         </div>
         <button id="menu-toggle" class="xl:hidden text-white focus:outline-none" aria-label="Abrir Menú">
@@ -24,22 +24,22 @@
                 </button>
                 <ul class="submenu hidden xl:block xl:absolute xl:top-full xl:left-0 xl:bg-blue-800 xl:shadow-lg xl:rounded xl:invisible xl:opacity-0 xl:group-hover:visible xl:group-hover:opacity-100 xl:group-hover:translate-y-1 xl:transition-all xl:duration-300 text-center min-w-[200px] z-50 pointer-events-auto bg-blue-800 xl:bg-opacity-80">
                     <li>
-                        <a href="/punta-cana" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                        <a href="/punta-cana" class="block px-4 py-2 hover:bg-red-700 xl:hover:text-yellow-400 menu-link">
                             Punta Cana
                         </a>
                     </li>
                     <li>
-                        <a href="/riviera-maya" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                        <a href="/riviera-maya" class="block px-4 py-2 hover:bg-red-700 xl:hover:text-yellow-400 menu-link">
                             Riviera Maya
                         </a>
                     </li>
                     <li>
-                        <a href="/cartagena-de-indias" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                        <a href="/cartagena-de-indias" class="block px-4 py-2 hover:bg-red-700 xl:hover:text-yellow-400 menu-link">
                             Cartagena de Indias
                         </a>
                     </li>
                     <li>
-                        <a href="/san-andres" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                        <a href="/san-andres" class="block px-4 py-2 hover:bg-red-700 xl:hover:text-yellow-400 menu-link">
                             San Andrés
                         </a>
                     </li>
@@ -53,32 +53,32 @@
                 </button>
                 <ul class="submenu hidden xl:block xl:absolute xl:top-full xl:left-0 xl:bg-blue-800 xl:shadow-lg xl:rounded xl:invisible xl:opacity-0 xl:group-hover:visible xl:group-hover:opacity-100 xl:group-hover:translate-y-1 xl:transition-all xl:duration-300 text-center min-w-[200px] z-50 pointer-events-auto bg-blue-800 xl:bg-opacity-80">
                     <li>
-                        <a href="/royal-decameron" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                        <a href="/royal-decameron" class="block px-4 py-2 hover:bg-red-700 xl:hover:text-yellow-400 menu-link">
                             Royal Decameron
                         </a>
                     </li>
                     <li>
-                        <a href="/cusco-magico" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                        <a href="/cusco-magico" class="block px-4 py-2 hover:bg-red-700 xl:hover:text-yellow-400 menu-link">
                             Cusco Mágico
                         </a>
                     </li>
                     <li>
-                        <a href="/tarapoto-fascinante" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                        <a href="/tarapoto-fascinante" class="block px-4 py-2 hover:bg-red-700 xl:hover:text-yellow-400 menu-link">
                             Tarapoto Fascinante
                         </a>
                     </li>
                     <li>
-                        <a href="/playas-del-norte" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                        <a href="/playas-del-norte" class="block px-4 py-2 hover:bg-red-700 xl:hover:text-yellow-400 menu-link">
                             Playas del Norte
                         </a>
                     </li>
                     <li>
-                        <a href="/arequipa" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                        <a href="/arequipa" class="block px-4 py-2 hover:bg-red-700 xl:hover:text-yellow-400 menu-link">
                             Arequipa
                         </a>
                     </li>
                     <li>
-                        <a href="/sur-magico" class="block px-4 py-2 hover:bg-gray-800 xl:hover:text-yellow-400 menu-link">
+                        <a href="/sur-magico" class="block px-4 py-2 hover:bg-red-700 xl:hover:text-yellow-400 menu-link">
                             Sur Mágico
                         </a>
                     </li>
@@ -106,10 +106,10 @@
         if (header) {
             window.addEventListener("scroll", function () {
                 if (window.scrollY > 50) {
-                    header.classList.add("bg-black");
-                    header.style.background = "rgba(10, 10, 10, 0.75)";
+                    header.classList.add("bg-blue-800/90");
+                    header.style.background = "rgba(30, 64, 175, 0.90)";;
                 } else {
-                    header.classList.remove("bg-black");
+                    header.classList.remove("bg-blue-800/90");
                     header.style.background = "transparent";
                 }
             });
