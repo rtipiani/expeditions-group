@@ -1,0 +1,41 @@
+---
+import Navbar from "../components/Navbar.astro"
+import Footer from "../components/Footer.astro"
+import Layout from "../layouts/Layout.astro"
+import BreadcrumbNosotros from "../components/BreadcrumbNosotros.astro"
+---
+<Layout>
+    <Navbar />
+    <BreadcrumbNosotros />
+    <section class="bg-white dark:bg-gray-900 py-20 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            
+            <!-- Imagen de fondo con overlay -->
+            <div class="relative h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-xl">
+            <img src="/about.jpeg" alt="Equipo Expeditions Group" class="absolute inset-0 w-full h-full object-cover brightness-75">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+                <h3 class="text-2xl font-semibold">Tu viaje, nuestra misión</h3>
+                <p class="text-sm opacity-90">+15 años guiando experiencias inolvidables</p>
+            </div>
+            </div>
+
+            <!-- Contenido textual -->
+            <div>
+            <h2 class="text-4xl font-bold text-gray-800 dark:text-white mb-6">¿Quiénes somos?</h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                En <span class="font-semibold text-blue-600">Expeditions Group</span> somos especialistas en <strong>viajes corporativos y educativos</strong>, con una sólida trayectoria en la gestión de grupos a nivel nacional e internacional. Nuestro compromiso es crear itinerarios que combinan logística impecable, atención al detalle y respaldo constante.
+            </p>
+
+            <div class="space-y-3 text-gray-700 dark:text-gray-300">
+                <p><strong class="text-gray-900 dark:text-white">📍 Oficina Comercial:</strong> Av. Larco 345 oficina S1, Miraflores - Lima</p>
+                <p><strong>📞 Teléfonos:</strong> 2410920 / 996667974 / 993270594</p>
+                <p><strong>👩‍💼 Coord. de Grupos:</strong> Thalia Vasquez – <a href="mailto:grupos@expeditionsgroupsac.com" class="text-blue-600 hover:underline">grupos@expeditionsgroupsac.com</a></p>
+                <p><strong>🧑‍💼 Gerente General:</strong> Alberto Zavaleta Ardiles – <a href="mailto:azavaleta@expeditionsgroupsac.com" class="text-blue-600 hover:underline">azavaleta@expeditionsgroupsac.com</a></p>
+            </div>
+            </div>
+
+        </div>
+    </section>
+    <Footer />
+</Layout>
