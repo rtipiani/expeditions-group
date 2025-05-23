@@ -1,13 +1,12 @@
 ---
 const slides = [
-    { image: "../../slide4.png", title: "Punta Cana - Rep. Dominicana", buttonText: "Consultar Ahora", position: "object-[30%_50%]" },
-    { image: "../../slide5.png", title: "San Andrés - Colombia", buttonText: "Consultar Ahora", position: "object-[30%_50%]" },
-    { image: "../../slide2.png", title: "Cartagena de Indias - Colombia", buttonText: "Consultar Ahora", position: "object-center" },
-    { image: "../../slide3.png", title: "Royal Decameron", buttonText: "Consultar Ahora", position: "object-[30%_50%]" },
-    { image: "../../slide1.png", title: "Cusco Mágico - Perú", buttonText: "Consultar Ahora", position: "object-center" },
+    { image: "../../slide4.avif", title: "Punta Cana - Rep. Dominicana", buttonText: "Consultar Ahora", position: "object-[30%_50%]" },
+    { image: "../../slide5.avif", title: "San Andrés - Colombia", buttonText: "Consultar Ahora", position: "object-[30%_50%]" },
+    { image: "../../slide2.avif", title: "Cartagena de Indias - Colombia", buttonText: "Consultar Ahora", position: "object-center" },
+    { image: "../../slide3.avif", title: "Royal Decameron", buttonText: "Consultar Ahora", position: "object-[30%_50%]" },
+    { image: "../../slide1.avif", title: "Cusco Mágico - Perú", buttonText: "Consultar Ahora", position: "object-center" },
 ];
 
-// Generar srcset automáticamente
 const generateSrcSet = (image: string): string => `
     ${image.replace('.avif', '-355w.avif')} 355w,
     ${image.replace('.avif', '-852w.avif')} 852w,
@@ -17,7 +16,6 @@ const generateSrcSet = (image: string): string => `
     ${image.replace('.avif', '-2268w.avif')} 2269w
 `;
 
-// Nuevo sizes optimizado
 const sizes = `
     (min-width: 2268px) 2268px,
     (min-width: 2000px) 2000px,
@@ -40,7 +38,7 @@ const sizes = `
                     <h2 class="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 text-center px-4 leading-snug sm:leading-tight md:leading-normal max-w-[80%] sm:max-w-[60%] lg:max-w-[50%]">
                         {slide.title}
                     </h2>
-                    <a href="#" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 bg-red-700 hover:bg-red-800 text-white font-medium rounded-full shadow-md transition-all duration-300">
+                    <a href="https://wa.link/aaitsz" target="_blank" class="inline-flex items-center gap-2 px-5 py-3 bg-red-700 hover:bg-red-800 text-white font-medium rounded-full shadow-md transition-all duration-300">
                         {slide.buttonText}
                         <i class="fa-brands fa-whatsapp text-lg"></i>
                     </a>

@@ -23,7 +23,6 @@
                 </a>
             </li>
 
-            <!-- Paquetes Internacionales -->
             <li class="relative w-full xl:w-auto group">
                 <button class="block w-full text-center py-3 px-4 xl:hover:text-yellow-400 transition submenu-toggle xl:cursor-pointer">
                     Paquetes Internacionales
@@ -52,7 +51,6 @@
                 </ul>
             </li>
 
-            <!-- Paquetes Nacionales -->
             <li class="relative w-full xl:w-auto group">
                 <button class="block w-full text-center py-3 px-4 xl:hover:text-yellow-400 transition submenu-toggle xl:cursor-pointer">
                     Paquetes Nacionales
@@ -108,7 +106,6 @@
         const menuLinks = document.querySelectorAll(".menu-link");
         const submenuToggles = document.querySelectorAll(".submenu-toggle");
 
-        // Header scroll background
         if (header) {
             window.addEventListener("scroll", function () {
                 if (window.scrollY > 50) {
@@ -121,7 +118,6 @@
             });
         }
 
-        // Mobile menu toggle
         if (menuToggle && menu) {
             menuToggle.addEventListener("click", () => {
                 menu.classList.toggle("max-h-0");
@@ -142,7 +138,6 @@
             });
         }
 
-        // Submenu toggles (only for mobile)
         submenuToggles.forEach(toggle => {
             toggle.addEventListener("click", () => {
                 const submenu = toggle.nextElementSibling;
@@ -152,7 +147,6 @@
             });
         });
 
-        // Active link highlight
         const currentPath = window.location.pathname.toLowerCase();
             menuLinks.forEach(link => {
             const href = link.getAttribute("href")?.toLowerCase();

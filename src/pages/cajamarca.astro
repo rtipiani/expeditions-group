@@ -7,83 +7,181 @@ import Layout from "../layouts/Layout.astro"
 <Layout>
     <Navbar />
     <BreadcrumbCajamarca />
-    <section class="pt-8 pb-16 px-6 bg-white min-h-screen">
+    <section class="pt-12 pb-20 px-6 bg-white min-h-screen">
         <div class="max-w-4xl mx-auto">
-            <div class="space-y-6 text-gray-700 text-lg">
-                <div class="space-y-4">
-                    <div>
-                        <h2 class="text-2xl font-bold text-blue-800 mb-4">
-                        01 DÍA: CITY TOURS - SANTA APOLONIA
-                        </h2>
-                        <ul class="space-y-2 text-gray-800">
-                            <li>
-                                <span class="font-semibold">02:45 hrs:</span> 
-                                Traslado al aeropuerto.
-                            </li>
-                            <li>
-                                <span class="font-semibold">07:25 hrs:</span> 
-                                Vuelo a Cajamarca con Jetsmart.
-                            </li>
-                            <li>
-                                <span class="font-semibold">08:40 hrs:</span> 
-                                Llegada a Cajamarca. Recepción e instalación en el hotel.
-                            </li>
-                            <li>
-                                <span class="font-semibold">08:00 hrs:</span> 
-                                Desayuno americano. Tiempo libre para aclimatarse.
-                            </li>
-                            <li>
-                                <span class="font-semibold">13:00 hrs:</span> 
-                                Almuerzo en restaurante turístico Salas. Inicio del recorrido:
-                                <ul class="list-disc list-inside ml-4 mt-1 text-gray-700">
-                                    <li>
-                                        Plaza de Armas: escenario de la caída del imperio incaico.
-                                    </li>
-                                    <li>
-                                        Cuarto del Rescate: lugar donde Atahualpa fue retenido por los españoles.
-                                    </li>
-                                    <li>
-                                        Complejo Monumental de Belén.
-                                    </li>
-                                    <li>
-                                        Colina de Santa Apolonia: vista panorámica y la Silla del Inca.
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <span class="font-semibold">19:00 hrs:</span> 
-                                Cena en el hotel.
-                            </li>
-                            <li>
-                                <span class="italic">
-                                    Pernocte.
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="text-2xl font-bold text-blue-800 mb-4">
-                        02 DÍA: GRANJA PORCÓN - HACIENDA LA COLPA - BAÑOS DEL INCA
-                        </h2>
-                        <ul class="space-y-2 text-gray-800">
-                            <li>
-                                <span class="font-semibold">08:00 hrs:</span> 
-                                Desayuno americano.
-                            </li> 
-                        </ul>
-                    </div>
-                <div>
-            </div>
-        </div>
+            <div class="space-y-10 text-gray-700 text-lg">
+                <!-- Día 1 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-bold text-blue-800 border-b border-red-400 pb-2 mb-4">
+                        01 DIA: CITY TOURS - SANTA APOLONIA
+                    </h2>
+                    <ul class="space-y-3 text-gray-800 list-disc list-inside">
+                        <li><strong>02:45 hrs:</strong> Traslado al aeropuerto</li>
+                        <li><strong>07:25 hrs:</strong> Salida con destino a la ciudad de Cajamarca. JETSMART.</li>
+                        <li><strong>08:40 hrs:</strong> Llegada a la ciudad de Cajamarca, Recepción e instalación en el hotel.</li>
+                        <li><strong>08:00 hrs:</strong> Desayuno americano. Tiempo libre para aclimarse.</li>
+                        <li><strong>13:00 hrs:</strong> ALMUERZO REST. TURISTICO SALAS Iniciaremos nuestro recorrido visitando la plaza de armas escenario de la caída del imperio incaico, lugar donde fue ejecutado el Inca Atahualpa en 1532. Luego visitaremos el cuarto del Rescate, lugar donde mantuvieron prisionero al Inca of reciendo a cambio de su liberación llenar de plata dos veces la habitación y una de oro. Luego visitaremos el complejo monumental de Belén. Finalmente conoceremos la Colina de Santa Apolonia de donde tendremos una vista panorámica de la ciudad y conoceremos la silla del Inca.</li>
+                        <li><strong>19:00 hrs:</strong>CENA EN EL HOTEL. Pernocte.</li>
+                    </ul>
+                </div>
 
-        <div class="flex flex-col sm:flex-row gap-4 mt-10">
-            <a href="/#tours" class="text-blue-800 px-6 py-3 rounded-lg border border-blue-800 text-base font-medium hover:bg-blue-800 hover:text-white transition">
-                <i class="fas fa-arrow-left mr-2"></i> Volver
-            </a>
-            <a href="" class="bg-blue-800 text-white px-6 py-3 rounded-lg text-base font-medium hover:bg-blue-900 transition" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i>
-                Consultar ahora
-            </a>
+                <!-- Día 2 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-bold text-blue-800 border-b border-red-400 pb-2 mb-4">
+                        02 DIA: GRANJA PORCÓN - HACIENDA LA COLPA - BAÑOS DEL INCA
+                    </h2>
+                    <ul class="space-y-3 text-gray-800 list-disc list-inside">
+                        <li><strong>08:00 hrs:</strong> Desayuno americano Visitaremos la Cooperativa Agraria Atahualpa, conocida como PORCON; lugar donde se encuentra el Parque Forestal más grande del Perú. Conoceremos su zoológico, granjas, talleres, Ganadería y Viveros. Cuenta con 12800 hectáreas, convirtiéndose en un ejemplo exitoso de cooperativa comunal.</li>
+                        <li><strong>13:00 hrs:</strong> ALMUERZO REST. CAMPESTRE ZARCO Continuáremos nuestro recorrido visitando la Ex-Hacienda La Colpa; donde observaran el llamado de las Vacas por su nombre, conoceremos su pintoresca casa, su laguna y capilla. Por la tarde visitaremos los Baños del inca, lugar atractivo por sus aguas termales que superan los 70°, los minerales que la componen poseen propiedades terapéuticas Luego visitaremos sus Fuentes termales, el Pozo del Inca y Los Perolitos.</li>
+                        <li><strong>19:00 hrs:</strong> CENA EN EL HOTEL. Pernocte.</li>
+                    </ul>
+                </div>
+
+                <!-- Día 3 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-bold text-blue-800 border-b border-red-400 pb-2 mb-4">
+                        03 DIA: CUMBEMAYO – VENTANILLAS DE OTUZCO
+                    </h2>
+                    <ul class="space-y-3 text-gray-800 list-disc list-inside">
+                        <li><strong>08:00 hrs:</strong> Desayuno americano Excursión a CUMBEMAYO zona arqueológica que se encuentra ubicado a 20 km. Al sureste de la ciudad, a una altitud de 3500 msnm. Alberga numerosas formaciones geológicas de origen volcánico conocida como fraylones debido a que se asemejan a siluetas de frailes en procesión. Conoceremos el Acueducto considerado como una de las obras más notables de américa pre colombina. Observaremos el Santuario, farallón que tiene la apariencia de una cabeza humana. Finalmente visitaremos u museo de sitio.</li>
+                        <li><strong>13:00 hrs:</strong> ALMUERZO REST. TURISTICO Por la tarde visitaremos la Campiña y Necrópolis de Otuzco, edificaciones funerarias perteneciente a la cultura Cajamarca, tienen una antigüedad de 50 A.C. a 500 D.C. Continuaremos conociendo el bosque de Hortensias y el Fundo Los Alpes; donde podremos apreciar la elaboración de los quesos. Retorno al hotel. Cena en el hotel. Pernocte</li>
+                    </ul>
+                </div>
+
+                <!-- Día 4 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-bold text-blue-800 border-b border-red-400 pb-2 mb-4">
+                        04 DIA: FULL DAY NAMORA
+                    </h2>
+                    <ul class="space-y-3 text-gray-800 list-disc list-inside">
+                        <li><strong>08:00 hrs:</strong> Desayuno americano. Visita a las cuevas Callacpuma y sus pinturas rupestres, disf rutaremos de un hermoso paisaje cajamarquino que rodea las lagunas Sulluscocha, continuaremos visitando la plaza de armas de Namora, el criadero de truchas y el taller artesanal de guitarras. Finalmente, visitaremos la Laguna de San Nicolás y el bosque de piedra Los Sapitos. ALMUERZO REST. TURISTICO. Retorno al hotel. Cena en el hotel. Pernocte</li>
+                    </ul>
+                </div>
+
+                <!-- Día 5 -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-bold text-blue-800 border-b border-red-400 pb-2 mb-4">
+                        05 DIA: CAJAMARCA- LIMA FELIZ RETORNO
+                    </h2>
+                    <ul class="space-y-3 text-gray-800 list-disc list-inside">
+                        <li><strong>05:35 hrs:</strong> Salida con destino a la ciudad de Lima. JETSMART.</li>
+                        <li><strong>06:51 hrs:</strong> Llegada a la ciudad de Lima, Traslado al colegio.</li>
+                    </ul>
+                </div>
+
+                <!-- Programa Incluye -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-bold text-blue-800 border-b border-red-400 pb-2 mb-4">EL PROGRAMA INCLUYE</h2>
+                    <ul class="list-disc list-inside space-y-3 text-gray-800">
+                        <li>Ticket aéreo Lima/ Cajamarca/ Lima JETSMART</li>
+                        <li>Atención personalizada en el aeropuerto GRUPOS</li>
+                        <li>Traslado al aeropuerto-colegio-aeropuerto BUS TURISTICO MOVIL BUS</li>
+                        <li>Traslado aeropuerto/ hotel/ aeropuerto en Cajamarca</li>
+                        <li>04 noches de alojamiento HOTEL 03 ESTRELLAS</li>
+                        <li>
+                            ALIMENTACION COMPLETA <br />
+                            - 04 Desayunos americano <br />
+                            - 04 Almuerzos tipo carta (RESTAURANTE TURISTICO) <br />
+                            - 04 Cenas en el Restaurante del hotel
+                        </li>
+                        <li>Guía oficial de turismo especializado</li>
+                        <li>Tour conductor acompañara durante el viaje. Beneficio para grupos de mínimo 20 personas pagantes.</li>
+                        <li>Ingreso a los lugares turísticos</li>
+                        <li>BOTIQUIN DE PRIMEROS AUXILIOS</li>
+                        <li>POR CADA 15 PARTICIPANTES, 01 LIBERADO</li>
+                        <li>
+                            TOURS DESCRITOS: <br />
+                            - CITYTOUR / SANTA APOLONIA <br />
+                            - VENTANILLAS DE OTUZCO <br />
+                            - BAÑOS DEL INCA / COLPA <br />
+                            - GRANJA PORCON / ZOOLOGICO <br />
+                            - FULL DAY NAMORA <br />
+                            - CUMBEMAYO
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-bold text-blue-800 border-b border-red-400 pb-2 mb-4">*** PORTAL DEL MARQUEZ</h2>
+                    <ul>
+                        <li>CATEGORIA TRES ESTRELLAS SUPERIOR</li>
+                        <li>CON HAB DOBLES</li>
+                        <li>TRIPLES CON BAÑO PRIVADO</li>
+                        <li>AGUA CALIENTE</li>
+                        <li>TV</li>
+                        <li>WI-FI</li>
+                    </ul>
+                </div>
+
+                <!-- Beneficios para el grupo -->
+                 <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-bold text-blue-800 border-b border-red-400 pb-2 mb-4">OBSEQUIO FILMACION DEL VIAJE</h2>
+                    <p>
+                        01 copia en formato mp4 de la filmación y fotografías del viaje para cada alumno. Los archivos serán entregados a través de nuestra plataforma mediante un link. Beneficio para grupos de mínimo 20 personas pagantes.
+                    </p>
+                </div>
+
+                <!-- Condiciones Generales -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm">
+                    <h2 class="text-2xl font-bold text-blue-800 border-b border-red-400 pb-2 mb-4">CONDICIONES GENERALES</h2>
+                    <ul class="list-disc list-inside space-y-3 text-gray-800">
+                        <li>Inscripción $100 y saldo en armadas hasta la fecha de viaje.</li>
+                        <li>Los depósitos se efectuarán directamente a la cuenta de la empresa, se entregará un cronograma de pagos y asignará un ejecutivo de la empresa para monitorear al grupo.</li>
+                        <li>EL PREPAGO (INSCRIPCIÓN) es no reembolsable, no endosable.</li>
+                        <li>Aceptamos pagos con tarjetas de crédito VISA, MASTERCARD. Comisión 5%. Solicitar link para pagos virtuales</li>
+                    </ul>
+                </div>
+
+                <!-- Descripción del Hotel -->
+                <div class="bg-gray-50 rounded-xl p-6 shadow-sm mt-12">
+                    <h2 class="text-2xl font-bold text-blue-800 border-b border-red-400 pb-2 mb-4">
+                        HOTEL PORTAL DEL MARQUEZ ***
+                    </h2>
+                    <div class="space-y-4 text-gray-800 text-base">
+                        <p>
+                            Se encuentra en pleno centro comercial y financiero de Cajamarca, a 1 cuadra de la plaza de armas, sus instalaciones están equipadas para brindarle comodidad. Disf rute de una cálida atención en una Antigua Casona Colonial, acondicionada exclusivamente para disfrutar su estadía.
+                        </p>
+                        <p>
+                            <ul>
+                                <li>
+                                    Internet Inalámbrico WIFI gratuito
+                                </li>
+                                <li>
+                                    Tv color LCD 32”
+                                </li>
+                                <li>
+                                    Cable
+                                </li>
+                                <li>
+                                    Teléfono
+                                </li>
+                                <li>
+                                    Caja de seguridad
+                                </li>
+                                <li>
+                                    Escritorio
+                                </li>
+                                <li>
+                                    Guarda ropa
+                                </li>
+                                <li>
+                                    Baño privado con agua caliente
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botones -->
+            <div class="flex flex-col sm:flex-row gap-4 mt-12 justify-center">
+                <a href="/" class="text-blue-800 px-6 py-3 rounded-lg border border-blue-800 text-base font-medium hover:bg-blue-800 hover:text-white transition">
+                    <i class="fas fa-arrow-left mr-2"></i> Volver
+                </a>
+                <a href="https://wa.link/aaitsz" class="bg-blue-800 text-white px-6 py-3 rounded-lg text-base font-medium hover:bg-blue-900 transition" target="_blank">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Consultar ahora
+                </a>
+            </div>
         </div>
     </section>
     <Footer />
